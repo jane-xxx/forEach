@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //forEach 封装
+        let arr = [2,3,4,5,6];
+        Array.prototype.myForEach=function (fn){
+            for(var i=0;i<this.length;i++){
+                fn(this[i],i,this);
+            }
+        }
+        arr.myForEach((item,ind,array)=>{
+            console.log(item,ind,array)
+        })
+    </script>
+</body>
+</html>
